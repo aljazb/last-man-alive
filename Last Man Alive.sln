@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{70768500-FC31-7867-F516-9B368703E2B2}") = "Last Man Alive", "Assembly-CSharp.csproj", "{AEA25225-425F-445F-3B04-15F714B69DE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEA25225-425F-445F-3B04-15F714B69DE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEA25225-425F-445F-3B04-15F714B69DE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEA25225-425F-445F-3B04-15F714B69DE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEA25225-425F-445F-3B04-15F714B69DE1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

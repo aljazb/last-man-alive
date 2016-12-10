@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: f4223392e785f43ae9f16cbf0d3ced35
+timeCreated: 1481112980
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: church
+    100002: door_top
+    100004: left_door
+    100006: //RootNode
+    100008: pCube1
+    100010: pCube2
+    100012: pCube3
+    100014: pCube4
+    100016: pCube5
+    100018: polySurface1
+    100020: polySurface2
+    100022: right_door
+    100024: tower1
+    100026: tower2
+    100028: tower3
+    100030: tower4
+    100032: transform1
+    100034: transform2
+    100036: transform3
+    100038: transform4
+    100040: transform5
+    100042: transform6
+    100044: transform7
+    100046: wall
+    100048: wall1
+    100050: wall2
+    100052: wall3
+    100054: wall4
+    400000: church
+    400002: door_top
+    400004: left_door
+    400006: //RootNode
+    400008: pCube1
+    400010: pCube2
+    400012: pCube3
+    400014: pCube4
+    400016: pCube5
+    400018: polySurface1
+    400020: polySurface2
+    400022: right_door
+    400024: tower1
+    400026: tower2
+    400028: tower3
+    400030: tower4
+    400032: transform1
+    400034: transform2
+    400036: transform3
+    400038: transform4
+    400040: transform5
+    400042: transform6
+    400044: transform7
+    400046: wall
+    400048: wall1
+    400050: wall2
+    400052: wall3
+    400054: wall4
+    2300000: church
+    2300002: door_top
+    2300004: left_door
+    2300006: right_door
+    2300008: tower1
+    2300010: tower2
+    2300012: tower3
+    2300014: tower4
+    2300016: wall
+    2300018: wall1
+    2300020: wall2
+    2300022: wall3
+    2300024: wall4
+    3300000: church
+    3300002: door_top
+    3300004: left_door
+    3300006: right_door
+    3300008: tower1
+    3300010: tower2
+    3300012: tower3
+    3300014: tower4
+    3300016: wall
+    3300018: wall1
+    3300020: wall2
+    3300022: wall3
+    3300024: wall4
+    4300000: tower1
+    4300002: wall
+    4300004: tower2
+    4300006: wall1
+    4300008: tower3
+    4300010: wall2
+    4300012: tower4
+    4300014: wall3
+    4300016: right_door
+    4300018: door_top
+    4300020: wall4
+    4300022: church
+    4300024: left_door
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
