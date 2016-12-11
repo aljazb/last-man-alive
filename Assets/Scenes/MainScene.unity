@@ -126,10 +126,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1015817328
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,10 +213,10 @@ Transform:
   m_LocalRotation: {x: 0.51487094, y: -0, z: -0, w: 0.85726774}
   m_LocalPosition: {x: -0.1, y: 37.18, z: -23.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 61.960003, y: 180.00002, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 61.960003, y: 180.00002, z: 0}
 --- !u!1 &1104962115
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +250,6 @@ Light:
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
-    m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
     m_NormalBias: 0.4
@@ -276,10 +275,10 @@ Transform:
   m_LocalRotation: {x: 0.84367454, y: -0.126029, z: 0.2260619, w: 0.47034672}
   m_LocalPosition: {x: 8.1, y: 18.98, z: -13.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 121.735, y: -30.015991, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 121.735, y: -30.015991, z: 0}
 --- !u!1 &1180388722
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,6 +288,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1180388724}
   - 114: {fileID: 1180388723}
+  - 114: {fileID: 1180388725}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -307,7 +307,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd98ab56c6c2435b9bafd178ab0e062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
+  MoveSpeed: 3
+  DiagonalSpeed: 2
+  Direction: 0
 --- !u!4 &1180388724
 Transform:
   m_ObjectHideFlags: 0
@@ -317,11 +319,27 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1513707466}
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1180388725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1180388722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c14446320f4c4b169cb15cdd113a096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxBullets: 15
+  NewBulletTime: 1
+  NumOfBullets: 10
+  bulletTransform: {fileID: 1000010821627936, guid: 942408f082b124fdb84ac99af2e72669,
+    type: 2}
 --- !u!1 &1513707462
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +352,7 @@ GameObject:
   - 65: {fileID: 1513707464}
   - 23: {fileID: 1513707463}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -362,7 +380,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -387,20 +404,20 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1513707462}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1513707466
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1513707462}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1180388724}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
 --- !u!1 &1619812809
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,10 +485,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -88.5, y: 0, z: -56.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1874852550
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,6 +517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CharacterTransform: {fileID: 1180388724}
+  CharacterMovementController: {fileID: 1180388723}
 --- !u!4 &1874852552
 Transform:
   m_ObjectHideFlags: 0
@@ -509,10 +527,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.580759, y: 18.544998, z: 8.791588}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2138651740
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,7 +571,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -588,10 +605,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.72, y: -0.17, z: 0.85}
   m_LocalScale: {x: 3.7492046, y: 3.749206, z: 3.749206}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2141754406
 Prefab:
   m_ObjectHideFlags: 0
