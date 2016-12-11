@@ -7,15 +7,13 @@ public class BulletController : MonoBehaviour {
 	[SerializeField] private float NewBulletTime;
 	[SerializeField] private int NumOfBullets;
 	[SerializeField] private Transform bulletTransform;
+	[SerializeField] private AudioSource gunshotSound;
 	private float StartTime;
 	CharacterMovementController Character;
-	AudioSource audio;
 
 	void Start () {
 		StartTime = Time.time;
 		Character = GameController.Instance.CharacterMovementController;
-		GameObject gunshotSound = GameObject.Find("GunshotSound");
-		audio = gunshotSound.GetComponent<AudioSource>();
 	}
 
 	void Update () {
@@ -31,7 +29,7 @@ public class BulletController : MonoBehaviour {
 			GameObject bullet = (GameObject) Instantiate(bulletTransform, transform.position, Quaternion.identity);
 			BulletMovementController bulletMovementController = bullet.GetComponent<BulletMovementController> ();
 			bulletMovementController.Direction = direction;
-			audio.Play();
+			gunshotSound.Play();
 			DeleteBullet();
 		}
 	}

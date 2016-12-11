@@ -45,6 +45,8 @@ public class BulletMovementController : MonoBehaviour {
 		transform.position += Vector3.Normalize(new Vector3(x, 0, z)) * BulletSpeed * Time.deltaTime; 
 	}
 
-
+	void OnTriggerEnter(Collider col) {
+		Destroy(gameObject);
+	}
 
 }
