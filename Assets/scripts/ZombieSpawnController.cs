@@ -19,8 +19,4 @@ public class ZombieSpawnController : MonoBehaviour {
 			}
 		}
 	}
-
-	void OnTriggerEnter(Collider col) {
-		Destroy(gameObject);
-	}
 }

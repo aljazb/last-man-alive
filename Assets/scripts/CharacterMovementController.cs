@@ -5,21 +5,31 @@ public class CharacterMovementController : MonoBehaviour {
 
 	[SerializeField] private float MoveSpeed;
 	[SerializeField] private float DiagonalSpeed;
+	[SerializeField] private Rigidbody Rigidbody;
+	[SerializeField] private Animator Animator;
 	public int Direction;
 
 	void Start () {
 		Direction = 0;
 	}
 
-	void Update () {
+	void FixedUpdate () {
 		float vertMovement = Input.GetAxis("Vertical");
 		float horiMovement = Input.GetAxis("Horizontal");
 
+		if (Mathf.Abs(vertMovement) < 0.1f && Mathf.Abs(horiMovement) < 0.1f ) {
+			Animator.SetBool("Walk", false);
+		} else {
+			Animator.SetBool("Walk", true);
+		}
+		Rigidbody.velocity = Vector3.zero;
 		if (vertMovement != 0 && horiMovement != 0) {
-			transform.position += new Vector3(horiMovement * DiagonalSpeed * Time.deltaTime, 0, vertMovement * DiagonalSpeed * Time.deltaTime);
+			Rigidbody.AddForce(new Vector3(horiMovement * DiagonalSpeed, 0, vertMovement * DiagonalSpeed));
+//			transform.position += new Vector3(horiMovement * DiagonalSpeed * Time.deltaTime, 0, vertMovement * DiagonalSpeed * Time.deltaTime);
 		} 
 		else {
-			transform.position += new Vector3(horiMovement * MoveSpeed * Time.deltaTime, 0, vertMovement * MoveSpeed * Time.deltaTime);
+			Rigidbody.AddForce(new Vector3(horiMovement * MoveSpeed, 0, vertMovement * MoveSpeed));
+//			transform.position += new Vector3(horiMovement * MoveSpeed * Time.deltaTime, 0, vertMovement * MoveSpeed * Time.deltaTime);
 		}
 
 		SetDirection (vertMovement, horiMovement);

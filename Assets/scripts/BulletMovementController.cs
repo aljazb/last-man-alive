@@ -45,8 +45,14 @@ public class BulletMovementController : MonoBehaviour {
 		transform.position += Vector3.Normalize(new Vector3(x, 0, z)) * BulletSpeed * Time.deltaTime; 
 	}
 
-	void OnTriggerEnter(Collider col) {
+	void OnCollisionEnter(Collision col) {
+		StartCoroutine(DestroyDelay());
+	}
+
+	IEnumerator DestroyDelay() {
+		yield return new WaitForSeconds(0.01f);
 		Destroy(gameObject);
 	}
+
 
 }
