@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Direction: 2
-  BulletSpeed: 5
+  BulletSpeed: 20
 --- !u!135 &135000014047665014
 SphereCollider:
   m_ObjectHideFlags: 1
