@@ -25,6 +25,7 @@ public class ZombieMovementController : MonoBehaviour {
 		if (col.gameObject.tag == "Bullet") {
 			Dead = true;
 			Rigidbody.useGravity = true;
+			Rigidbody.constraints = RigidbodyConstraints.None;
 		}
 	}
 }
