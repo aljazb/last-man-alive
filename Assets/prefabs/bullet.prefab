@@ -108,6 +108,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Direction: 2
   BulletSpeed: 20
+  BloodParticleSystem: {fileID: 1000012689722724, guid: 4e94f1ce953a245e29708eb679abde61,
+    type: 2}
 --- !u!135 &135000014047665014
 SphereCollider:
   m_ObjectHideFlags: 1
