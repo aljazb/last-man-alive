@@ -22,11 +22,12 @@ public class CharacterMovementController : MonoBehaviour {
 		float vertMovement = Input.GetAxisRaw("Vertical");
 		float horiMovement = Input.GetAxisRaw("Horizontal");
 
-		if (Mathf.Abs(vertMovement) < 0.1f && Mathf.Abs(horiMovement) < 0.1f ) {
+		if (vertMovement == 0 && horiMovement == 0) {
 			Animator.SetBool("Walk", false);
 		} else {
 			Animator.SetBool("Walk", true);
 		}
+
 		int prevDirection = Direction;
 		Rigidbody.velocity = Vector3.zero;
 		if (vertMovement != 0 && horiMovement != 0) {
@@ -37,7 +38,7 @@ public class CharacterMovementController : MonoBehaviour {
 		} else if (vertMovement == 0 || horiMovement == 0) {
 			if (Time.time - StopDiagonalWalkTime > DiagonalOffsetTime) {
 				Rigidbody.AddForce(new Vector3(horiMovement * MoveSpeed, 0, vertMovement * MoveSpeed));
-				transform.position += new Vector3(horiMovement * MoveSpeed * Time.deltaTime, 0, vertMovement * MoveSpeed * Time.deltaTime);
+				//transform.position += new Vector3(horiMovement * MoveSpeed * Time.deltaTime, 0, vertMovement * MoveSpeed * Time.deltaTime);
 				SetDirection (vertMovement, horiMovement);
 			}
 		}
