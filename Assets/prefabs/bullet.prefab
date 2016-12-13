@@ -24,7 +24,6 @@ GameObject:
   - 23: {fileID: 23000011480419880}
   - 114: {fileID: 114000010491507540}
   - 54: {fileID: 54000013571795830}
-  - 114: {fileID: 114000013804056576}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Bullet
@@ -112,18 +111,6 @@ MonoBehaviour:
   BloodParticleSystem: {fileID: 1000012689722724, guid: 4e94f1ce953a245e29708eb679abde61,
     type: 2}
   Rigidbody: {fileID: 54000013571795830}
---- !u!114 &114000013804056576
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010821627936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e0210e6b34af42a2850085b91165068, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DestroyTime: 4
 --- !u!135 &135000014047665014
 SphereCollider:
   m_ObjectHideFlags: 1
