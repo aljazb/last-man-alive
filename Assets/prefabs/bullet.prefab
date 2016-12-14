@@ -25,7 +25,7 @@ GameObject:
   - 114: {fileID: 114000010491507540}
   - 54: {fileID: 54000013571795830}
   - 114: {fileID: 114000012666960600}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010821627936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.467003, y: 0, z: 1.0552444}
+  m_LocalPosition: {x: 4.4917145, y: 0, z: -1.6490707}
   m_LocalScale: {x: 0.34240824, y: 0.3424082, z: 0.3424082}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -134,5 +134,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.43
   m_Center: {x: 0, y: 0, z: 0}
