@@ -9,6 +9,7 @@ public class CharacterMovementController : MonoBehaviour {
 	[SerializeField] private Animator Animator;
 	[SerializeField] private float DiagonalOffsetTime;
 	[SerializeField] private float LerpSpeed;
+
 	public int Direction;
 	float StopDiagonalWalkTime;
 	bool StayDiagonal = false;
