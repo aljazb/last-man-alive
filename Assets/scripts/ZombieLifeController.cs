@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class ZombieLifeController : MonoBehaviour {
-
 	[SerializeField] private Rigidbody Rigidbody;
 	[SerializeField] private float SinkSpeed;
 	[SerializeField] private float SinkDelay;

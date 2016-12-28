@@ -8,6 +8,8 @@ public class BulletController : MonoBehaviour {
 	[SerializeField] private int NumOfBullets;
 	[SerializeField] private Transform bulletTransform;
 	[SerializeField] private AudioSource gunshotSound;
+	[SerializeField] private UnityEngine.UI.Text NumOfBulletsText;
+
 	private float StartTime;
 	CharacterMovementController Character;
 
@@ -32,6 +34,8 @@ public class BulletController : MonoBehaviour {
 			gunshotSound.Play();
 			DeleteBullet();
 		}
+
+		NumOfBulletsText.text = NumOfBullets.ToString();
 	}
 
 	void AddBullet() {
