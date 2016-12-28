@@ -27,13 +27,17 @@ public class ZombieLifeController : MonoBehaviour {
 		if (col.gameObject.tag == "Bullet") {
 			LifeCount--;
 			if (LifeCount <= 0) {
-				Animator.SetTrigger("Stop");
-				Dead = true;
-				Rigidbody.useGravity = true;
-				Rigidbody.constraints = RigidbodyConstraints.None;
-				StartCoroutine(DelaySink());
+				Die();	
 			}
 		}
+	}
+
+	public void Die() {
+		Animator.SetTrigger("Stop");
+		Dead = true;
+		Rigidbody.useGravity = true;
+		Rigidbody.constraints = RigidbodyConstraints.None;
+		StartCoroutine(DelaySink());
 	}
 
 	IEnumerator DelaySink() {

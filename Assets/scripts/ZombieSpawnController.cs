@@ -5,10 +5,6 @@ public class ZombieSpawnController : MonoBehaviour {
 
 	[SerializeField] private Camera camera;
 	[SerializeField] private GameObject zombiePrefab;
-
-	void Start () {
-	
-	}
 		
 	void Update () {
 		if (Input.GetButtonDown("Fire1")) {

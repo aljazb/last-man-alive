@@ -9,10 +9,13 @@ public class CharacterMovementController : MonoBehaviour {
 	[SerializeField] private Animator Animator;
 	[SerializeField] private float DiagonalOffsetTime;
 	[SerializeField] private float LerpSpeed;
+	[SerializeField] private float BombDelay;
+	[SerializeField] private CharacterBombController CharacterBombController;
 
 	public int Direction;
 	float StopDiagonalWalkTime;
 	bool StayDiagonal = false;
+	bool Bomb = false;
 
 	void Start () {
 		Direction = 0;
@@ -28,7 +31,7 @@ public class CharacterMovementController : MonoBehaviour {
 		} else {
 			Animator.SetBool("Walk", true);
 		}
-
+			
 		int prevDirection = Direction;
 		Rigidbody.velocity = Vector3.zero;
 		if (vertMovement != 0 && horiMovement != 0) {
@@ -74,5 +77,27 @@ public class CharacterMovementController : MonoBehaviour {
 			//Debug.Log ("vertical:  "+vertMovement);
 			//Debug.Log ("horizontal:  "+horiMovement);
 		}
-	} 
+	}
+
+	public void BombExplode() {
+		GetComponent<CapsuleCollider>().isTrigger = true;
+		GetComponent<BoxCollider>().isTrigger = true;
+		Rigidbody.useGravity = false;
+		StartCoroutine(BombTimer());
+	}
+
+	IEnumerator BombTimer() {
+		yield return new WaitForSeconds(BombDelay);
+		Bomb = false;
+		GetComponent<CapsuleCollider>().isTrigger = false;
+		GetComponent<BoxCollider>().isTrigger = false;
+		Rigidbody.useGravity = true;
+	}
+
+	void OnTriggerEnter(Collider col) {
+		if (col.gameObject.tag == "BombPickup") {
+			Destroy(col.gameObject);
+			CharacterBombController.AddBomb();
+		}
+	}
 }

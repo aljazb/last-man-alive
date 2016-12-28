@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012182408342}
   - 65: {fileID: 65000012992556960}
+  - 114: {fileID: 114000011363502696}
   m_Layer: 0
   m_Name: Grave
   m_TagString: Untagged
@@ -61,7 +62,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000012312764466
 GameObject:
   m_ObjectHideFlags: 0
@@ -77,7 +78,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1000013198133170
 GameObject:
   m_ObjectHideFlags: 1
@@ -114,10 +115,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011177568080}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.15, y: 1.15, z: 0.35}
+  m_LocalRotation: {x: -0, y: 0.37018284, z: -0, w: 0.92895895}
+  m_LocalPosition: {x: 3.7990565, y: -2.4621472, z: 6.6949105}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -18.326, z: 0}
   m_Children:
   - {fileID: 4000013520699704}
   - {fileID: 4000013850742632}
@@ -318,3 +319,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000011363502696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011177568080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2aafb9c07bb2484c9429c3c2e0f76f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 15
+  GraveDestroyPrefab: {fileID: 1000011309199994, guid: a9d5fa8d3899f4bd7ba8afe2b0407c10,
+    type: 2}
+  FloatingBombPrefab: {fileID: 1000010673486784, guid: 97d65be0ef9294268984cd31c80a1b0f,
+    type: 2}

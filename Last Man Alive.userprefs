@@ -1,16 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/CharacterMovementController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/BombController.cs">
     <Files>
-      <File FileName="Assets/scripts/CharacterMovementController.cs" Line="57" Column="1" />
+      <File FileName="Assets/scripts/CharacterMovementController.cs" Line="12" Column="1" />
       <File FileName="Assets/scripts/GameController.cs" Line="17" Column="10" />
       <File FileName="Assets/scripts/ZombieSpawnController.cs" Line="12" Column="3" />
       <File FileName="Assets/scripts/BulletController.cs" Line="14" Column="17" />
       <File FileName="Assets/scripts/BulletMovementController.cs" Line="12" Column="3" />
-      <File FileName="Assets/scripts/DestroyAfterSeconds.cs" Line="13" Column="45" />
-      <File FileName="Assets/scripts/DoorController.cs" Line="15" Column="1" />
-      <File FileName="Assets/scripts/ZombieMovementController.cs" Line="33" Column="29" />
-      <File FileName="Assets/scripts/ZombieLifeController.cs" Line="26" Column="35" />
+      <File FileName="Assets/scripts/DestroyAfterSeconds.cs" Line="6" Column="2" />
+      <File FileName="Assets/scripts/DoorController.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/ZombieMovementController.cs" Line="2" Column="26" />
+      <File FileName="Assets/scripts/ZombieLifeController.cs" Line="30" Column="11" />
+      <File FileName="Assets/scripts/BombController.cs" Line="23" Column="63" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
