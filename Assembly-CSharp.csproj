@@ -53,6 +53,7 @@
      <Compile Include="Assets\scripts\DestroyAfterSeconds.cs" />
      <Compile Include="Assets\scripts\DirtController.cs" />
      <Compile Include="Assets\scripts\DoorController.cs" />
+     <Compile Include="Assets\scripts\EndController.cs" />
      <Compile Include="Assets\scripts\GameController.cs" />
      <Compile Include="Assets\scripts\GraveController.cs" />
      <Compile Include="Assets\scripts\ZombieLifeController.cs" />

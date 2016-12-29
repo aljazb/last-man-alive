@@ -133,6 +133,14 @@ Prefab:
       propertyPath: m_Name
       value: ScenePrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 4000010979756464, guid: 720ec952f62eb4246bd2332942059bd6, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -1.0250001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010979756464, guid: 720ec952f62eb4246bd2332942059bd6, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 1.9342041
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 720ec952f62eb4246bd2332942059bd6, type: 2}
   m_IsPrefabParent: 0
