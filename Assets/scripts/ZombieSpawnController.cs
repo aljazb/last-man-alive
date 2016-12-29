@@ -4,12 +4,17 @@ using System.Collections;
 public class ZombieSpawnController : MonoBehaviour {
 	[SerializeField] private int MaxZombies;
 	[SerializeField] private float NewZombieTime;
+	[SerializeField] private float NewBigZombieTime;
 	[SerializeField] private int NumOfZombies;
+	[SerializeField] private int MaxBigZombies;
+	[SerializeField] private int NumOfBigZombies;
+	[SerializeField] private UnityEngine.UI.Text NumOfBigZombiesText;
 	[SerializeField] private UnityEngine.UI.Text NumOfZombiesText;
 	private float StartTime;
 
-	[SerializeField] private Camera camera;
-	[SerializeField] private GameObject zombiePrefab;
+	[SerializeField] private Camera Camera;
+	[SerializeField] private GameObject ZombiePrefab;
+	[SerializeField] private GameObject BigZombiePrefab;
 
 	void Start () {
 		StartTime = Time.time;
@@ -18,10 +23,18 @@ public class ZombieSpawnController : MonoBehaviour {
 	void Update () {
 		if (Input.GetButtonDown("Fire1")  && NumOfZombies > 0) {
 			RaycastHit hit;
-			Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+			Ray ray = Camera.ScreenPointToRay(Input.mousePosition);
 			if (Physics.Raycast(ray, out hit) && hit.collider.gameObject.name == "ZombieArea") {
-				Instantiate(zombiePrefab, hit.point, zombiePrefab.transform.rotation);
+				Instantiate(ZombiePrefab, hit.point, ZombiePrefab.transform.rotation);
 				DeleteZombie ();
+			}
+		}
+		if (Input.GetButtonDown("Fire2")  && NumOfBigZombies > 0) {
+			RaycastHit hit;
+			Ray ray = Camera.ScreenPointToRay(Input.mousePosition);
+			if (Physics.Raycast(ray, out hit) && hit.collider.gameObject.name == "ZombieArea") {
+				Instantiate(BigZombiePrefab, hit.point, BigZombiePrefab.transform.rotation);
+				DeleteBigZombie ();
 			}
 		}
 
@@ -31,6 +44,7 @@ public class ZombieSpawnController : MonoBehaviour {
 			AddZombie();
 		}
 
+		NumOfBigZombiesText.text = NumOfBigZombies.ToString();
 		NumOfZombiesText.text = NumOfZombies.ToString();
 	}
 
@@ -40,9 +54,21 @@ public class ZombieSpawnController : MonoBehaviour {
 		}
 	}
 
+	void AddBigZombie() {
+		if (NumOfBigZombies < MaxBigZombies) {
+			NumOfBigZombies++;
+		}
+	}
+
 	void DeleteZombie() {
 		if (NumOfZombies > 0) {
 			NumOfZombies--;
+		}
+	}
+
+	void DeleteBigZombie() {
+		if (NumOfBigZombies > 0) {
+			NumOfBigZombies--;
 		}
 	}
 }

@@ -16,7 +16,7 @@ public class ZombieLifeController : MonoBehaviour {
 	void Update() {
 		if (SinkToGround) {
 			transform.position += Vector3.down * SinkSpeed * Time.deltaTime;
-			if (transform.position.y < -3f) {
+			if (transform.position.y < -5f) {
 				Destroy(gameObject);
 			}
 		}
