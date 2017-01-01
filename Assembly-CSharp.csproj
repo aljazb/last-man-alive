@@ -48,6 +48,7 @@
      <Compile Include="Assets\scripts\BombController.cs" />
      <Compile Include="Assets\scripts\BulletController.cs" />
      <Compile Include="Assets\scripts\BulletMovementController.cs" />
+     <Compile Include="Assets\scripts\CameraController.cs" />
      <Compile Include="Assets\scripts\CharacterBombController.cs" />
      <Compile Include="Assets\scripts\CharacterMovementController.cs" />
      <Compile Include="Assets\scripts\DestroyAfterSeconds.cs" />
@@ -56,6 +57,7 @@
      <Compile Include="Assets\scripts\EndController.cs" />
      <Compile Include="Assets\scripts\GameController.cs" />
      <Compile Include="Assets\scripts\GraveController.cs" />
+     <Compile Include="Assets\scripts\GraveSpawnController.cs" />
      <Compile Include="Assets\scripts\ZombieLifeController.cs" />
      <Compile Include="Assets\scripts\ZombieMovementController.cs" />
      <Compile Include="Assets\scripts\ZombieSpawnController.cs" />

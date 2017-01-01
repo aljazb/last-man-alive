@@ -47,7 +47,7 @@ AnimationClip:
       - time: 1
         value: {x: -0.81, y: 3.28, z: 18.38}
         inSlope: {x: -0.355, y: -16.95, z: 20.79}
-        outSlope: {x: -0.355, y: -16.95, z: 20.79}
+        outSlope: {x: -0.355, y: -0, z: -0}
         tangentMode: 0
       - time: 1.5833334
         value: {x: -0.81, y: 3.28, z: 18.38}
@@ -190,8 +190,8 @@ AnimationClip:
       - time: 1
         value: 3.28
         inSlope: -16.95
-        outSlope: -16.95
-        tangentMode: 10
+        outSlope: -0
+        tangentMode: 17
       - time: 1.5833334
         value: 3.28
         inSlope: 0
@@ -215,8 +215,8 @@ AnimationClip:
       - time: 1
         value: 18.38
         inSlope: 20.79
-        outSlope: 20.79
-        tangentMode: 10
+        outSlope: -0
+        tangentMode: 17
       - time: 1.5833334
         value: 18.38
         inSlope: 0
@@ -378,4 +378,11 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 1.5833334
+    functionName: End
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

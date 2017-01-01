@@ -7,6 +7,10 @@ public class GraveController : MonoBehaviour {
 	[SerializeField] private GameObject GraveDestroyPrefab;
 	[SerializeField] private GameObject FloatingBombPrefab;
 
+	void Start() {
+		transform.GetChild(Random.Range(0, transform.childCount)).gameObject.SetActive(true);
+	}
+
 	void OnCollisionEnter(Collision col) {
 		if (col.gameObject.tag == "Bullet") {
 			Health--;

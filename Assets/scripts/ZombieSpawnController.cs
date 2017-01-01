@@ -11,6 +11,7 @@ public class ZombieSpawnController : MonoBehaviour {
 	[SerializeField] private UnityEngine.UI.Text NumOfBigZombiesText;
 	[SerializeField] private UnityEngine.UI.Text NumOfZombiesText;
 	private float StartTime;
+	private float StartBigTime;
 
 	[SerializeField] private Camera Camera;
 	[SerializeField] private GameObject ZombiePrefab;
@@ -18,6 +19,7 @@ public class ZombieSpawnController : MonoBehaviour {
 
 	void Start () {
 		StartTime = Time.time;
+		StartBigTime = Time.time;
 	}
 		
 	void Update () {
@@ -42,6 +44,11 @@ public class ZombieSpawnController : MonoBehaviour {
 		if (CurrentTime - StartTime > NewZombieTime) {
 			StartTime = CurrentTime;
 			AddZombie();
+		}
+
+		if (CurrentTime - StartBigTime > NewBigZombieTime) {
+			StartBigTime = CurrentTime;
+			AddBigZombie();
 		}
 
 		NumOfBigZombiesText.text = NumOfBigZombies.ToString();
