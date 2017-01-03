@@ -323,7 +323,7 @@ GameObject:
   - 114: {fileID: 114000010957778810}
   m_Layer: 0
   m_Name: BigDaddy
-  m_TagString: Zombie
+  m_TagString: BigDaddy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

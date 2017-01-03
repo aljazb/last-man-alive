@@ -51,6 +51,7 @@
      <Compile Include="Assets\scripts\CameraController.cs" />
      <Compile Include="Assets\scripts\CharacterBombController.cs" />
      <Compile Include="Assets\scripts\CharacterMovementController.cs" />
+     <Compile Include="Assets\scripts\CharcterLifeController.cs" />
      <Compile Include="Assets\scripts\DestroyAfterSeconds.cs" />
      <Compile Include="Assets\scripts\DirtController.cs" />
      <Compile Include="Assets\scripts\DoorController.cs" />

@@ -471,7 +471,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!154 &318996972
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -1206,11 +1206,26 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011827995314, guid: 720ec952f62eb4246bd2332942059bd6, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010527077888, guid: 720ec952f62eb4246bd2332942059bd6,
+        type: 2}
+      propertyPath: m_HandleRect
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1000013623144466, guid: 720ec952f62eb4246bd2332942059bd6, type: 2}
       propertyPath: m_Name
       value: ScenePrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013976552784, guid: 720ec952f62eb4246bd2332942059bd6,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013976552784, guid: 720ec952f62eb4246bd2332942059bd6,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 720ec952f62eb4246bd2332942059bd6, type: 2}
