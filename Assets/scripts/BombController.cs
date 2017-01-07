@@ -28,6 +28,7 @@ public class BombController : MonoBehaviour {
 				Vector3 force = (hit.gameObject.transform.position-transform.position) * (Magnitude/60f);
 				hit.GetComponent<CharacterMovementController>().BombExplode();
 				hit.gameObject.GetComponent<Rigidbody>().AddForce(force);
+				hit.GetComponent<CharcterLifeController>().Bomb(Vector3.Distance(hit.gameObject.transform.position, transform.position));
 			}
 		}
 		Instantiate(ExplosionPrefab, transform.position, ExplosionPrefab.transform.rotation);

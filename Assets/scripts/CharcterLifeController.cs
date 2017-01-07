@@ -22,6 +22,14 @@ public class CharcterLifeController : MonoBehaviour {
 		RedColor = new Color(1f, 0, 0, 0.24f);
 	}
 
+	public void Bomb(float magnitude) {
+		CharacterLife -= magnitude/5f;
+		Slider.value = CharacterLife;
+		if (!IsAlive()) {
+			Die();
+		}
+	}
+
 	void lifeDamaged(bool isBigDaddy) {
 		if (IsAlive()) {
 			if (isBigDaddy) {
