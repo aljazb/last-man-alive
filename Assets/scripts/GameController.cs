@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -34,5 +35,21 @@ public class GameController : MonoBehaviour {
 			Debug.LogError("Neveljavna smer");
 			return Vector2.zero;
 		}
+	}
+
+	public void Replay() {
+		SceneManager.LoadScene(Application.loadedLevel);
+	}
+
+	public void Quit() {
+		SceneManager.LoadScene("Menu");
+	}
+
+	public void Pause() {
+		Time.timeScale = 0f;
+	}
+
+	public void Continue() {
+		Time.timeScale = 1f;
 	}
 }

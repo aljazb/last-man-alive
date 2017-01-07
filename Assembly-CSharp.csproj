@@ -59,6 +59,8 @@
      <Compile Include="Assets\scripts\GameController.cs" />
      <Compile Include="Assets\scripts\GraveController.cs" />
      <Compile Include="Assets\scripts\GraveSpawnController.cs" />
+     <Compile Include="Assets\scripts\MenuController.cs" />
+     <Compile Include="Assets\scripts\MenuZombieSpawnController.cs" />
      <Compile Include="Assets\scripts\ZombieLifeController.cs" />
      <Compile Include="Assets\scripts\ZombieMovementController.cs" />
      <Compile Include="Assets\scripts\ZombieSpawnController.cs" />

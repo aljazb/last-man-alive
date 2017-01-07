@@ -379,7 +379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExplodeTime: 3
   Radius: 7
-  Magnitude: 3000
+  Magnitude: 10000
   ExplosionPrefab: {fileID: 100004, guid: 855534f53fb8549798644938edaa2744, type: 2}
 --- !u!135 &135000011935268978
 SphereCollider:
