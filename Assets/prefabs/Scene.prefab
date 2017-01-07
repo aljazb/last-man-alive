@@ -459,7 +459,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012745000854}
   - 114: {fileID: 114000013905606074}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: BombController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -642,8 +642,8 @@ GameObject:
   - 4: {fileID: 4000012965258758}
   - 212: {fileID: 212000010729968934}
   - 135: {fileID: 135000013155801704}
-  m_Layer: 8
-  m_Name: NoSpawnRadious
+  m_Layer: 10
+  m_Name: NoSpawnRadius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

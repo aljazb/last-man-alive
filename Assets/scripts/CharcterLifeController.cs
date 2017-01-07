@@ -23,7 +23,7 @@ public class CharcterLifeController : MonoBehaviour {
 	}
 
 	public void Bomb(float magnitude) {
-		CharacterLife -= magnitude/5f;
+		CharacterLife -= magnitude/2f;
 		Slider.value = CharacterLife;
 		if (!IsAlive()) {
 			Die();
