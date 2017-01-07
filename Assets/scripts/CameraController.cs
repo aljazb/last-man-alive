@@ -9,6 +9,6 @@ public class CameraController : MonoBehaviour {
 	}
 
 	void EndDeath() {
-		SceneManager.LoadScene(Application.loadedLevel);
+		GameController.Instance.Replay();
 	}
 }
