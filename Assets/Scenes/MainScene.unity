@@ -1208,11 +1208,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114000010527077888, guid: 720ec952f62eb4246bd2332942059bd6,
-        type: 2}
-      propertyPath: m_HandleRect
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1000013623144466, guid: 720ec952f62eb4246bd2332942059bd6, type: 2}
       propertyPath: m_Name
       value: ScenePrefab

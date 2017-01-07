@@ -19,7 +19,7 @@ public class BulletMovementController : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision col) {
-		if (col.gameObject.tag == "Zombie") {
+		if (col.gameObject.tag == "Zombie" || col.gameObject.tag == "BigDaddy") {
 			Instantiate(BloodParticleSystem, transform.position, Quaternion.Euler(0,45f*Direction,0));
 		}
 		Destroy(gameObject);

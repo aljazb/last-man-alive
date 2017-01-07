@@ -20,7 +20,7 @@ public class BombController : MonoBehaviour {
 	private void Explode() {
 		Collider[] hitColliders = Physics.OverlapSphere(transform.position, Radius);
 		foreach (Collider hit in hitColliders) {
-			if (hit.gameObject.tag == "Zombie") {
+			if (hit.gameObject.tag == "Zombie" || hit.gameObject.tag == "BigDaddy") {
 				hit.gameObject.GetComponent<ZombieLifeController>().Die();
 				Vector3 force = (hit.gameObject.transform.position-transform.position) * Magnitude;
 				hit.gameObject.GetComponent<Rigidbody>().AddForce(force);
