@@ -20,7 +20,8 @@ public class GraveSpawnController : MonoBehaviour {
 		for (int i = 0; i < graveCount; i++) {
 			Vector2 gravePos = FindSpawnPos();	
 			GravePositions.Add(gravePos);
-			Instantiate(GravePrefab, new Vector3(gravePos.x, transform.position.y, gravePos.y), Quaternion.Euler(0, Random.Range(0, 360f), 0), transform);
+			GameObject Grave = (GameObject)Instantiate(GravePrefab, new Vector3(gravePos.x, transform.position.y, gravePos.y), Quaternion.Euler(0, Random.Range(0, 360f), 0));
+			Grave.transform.parent = transform;
 		}
 	}
 
