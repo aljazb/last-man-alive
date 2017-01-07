@@ -459,7 +459,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012745000854}
   - 114: {fileID: 114000013905606074}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: BombController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
