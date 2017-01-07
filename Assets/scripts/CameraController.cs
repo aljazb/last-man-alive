@@ -7,4 +7,8 @@ public class CameraController : MonoBehaviour {
 	void End() {
 		SceneManager.LoadScene("Level2");
 	}
+
+	void EndDeath() {
+		SceneManager.LoadScene(Application.loadedLevel);
+	}
 }

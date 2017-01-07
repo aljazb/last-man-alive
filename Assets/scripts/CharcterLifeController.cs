@@ -8,9 +8,13 @@ public class CharcterLifeController : MonoBehaviour {
 	[SerializeField] private float BigDaddyDamage;
 	[SerializeField] private Slider Slider;
 	[SerializeField] private SpriteRenderer NoSpawnRadious;
+	[SerializeField] private GameObject DeathPrefab;
+	[SerializeField] private GameObject CharModel;
+	[SerializeField] private Animator CameraAnimator;
 
 	Color NormalColor;
 	Color RedColor;
+	bool Dead = false;
 
 	void Start () {
 		CharacterLife = 1;
@@ -38,7 +42,13 @@ public class CharcterLifeController : MonoBehaviour {
 	}
 
 	void Die() {
-		
+		if (!Dead) {
+			CameraAnimator.SetTrigger("EndDeath");
+			Dead = true;
+			Instantiate(DeathPrefab, transform.position, Quaternion.identity);
+			CharModel.SetActive(false);
+			NoSpawnRadious.enabled = false;
+		}
 	}
 
 	void OnCollisionStay(Collision col) {
