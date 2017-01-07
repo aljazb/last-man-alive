@@ -9,6 +9,7 @@ public class ZombieLifeController : MonoBehaviour {
 	[SerializeField] private Transform ZombieCenter;
 	[SerializeField] private Animator Animator;
 	[SerializeField] private int LifeCount;
+	[SerializeField] private AudioSource ZombiePainSound;
 
 	private bool SinkToGround = false;
 	public bool Dead = false;
@@ -25,6 +26,7 @@ public class ZombieLifeController : MonoBehaviour {
 	void OnCollisionEnter(Collision col) {
 		if (col.gameObject.tag == "Bullet") {
 			LifeCount--;
+			ZombiePainSound.Play();
 			if (LifeCount <= 0) {
 				Die();	
 			}

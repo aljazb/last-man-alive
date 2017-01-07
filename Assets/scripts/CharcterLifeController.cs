@@ -11,6 +11,8 @@ public class CharcterLifeController : MonoBehaviour {
 	[SerializeField] private GameObject DeathPrefab;
 	[SerializeField] private GameObject CharModel;
 	[SerializeField] private Animator CameraAnimator;
+	[SerializeField] private AudioSource CharacterDyingSound;
+	[SerializeField] private AudioSource CharacterDieSound;
 
 	Color NormalColor;
 	Color RedColor;
@@ -39,6 +41,7 @@ public class CharcterLifeController : MonoBehaviour {
 				CharacterLife -= ZombieDamage * Time.fixedDeltaTime;
 			}
 			Slider.value = CharacterLife;
+			CharacterDyingSound.Play();
 		}
 		else {
 			Die();
@@ -56,6 +59,7 @@ public class CharcterLifeController : MonoBehaviour {
 			Instantiate(DeathPrefab, transform.position, Quaternion.identity);
 			CharModel.SetActive(false);
 			NoSpawnRadious.enabled = false;
+			CharacterDieSound.Play();
 		}
 	}
 
