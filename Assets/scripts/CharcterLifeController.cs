@@ -51,6 +51,7 @@ public class CharcterLifeController : MonoBehaviour {
 
 	void Die() {
 		if (!Dead) {
+			GetComponent<AudioSource>().Stop();
 			CameraAnimator.SetTrigger("EndDeath");
 			Dead = true;
 			Instantiate(DeathPrefab, transform.position, Quaternion.identity);
@@ -61,9 +62,15 @@ public class CharcterLifeController : MonoBehaviour {
 
 	void OnCollisionStay(Collision col) {
 		if (col.gameObject.tag == "Zombie") {
+			if (!GetComponent<AudioSource>().isPlaying && !Dead) {
+				GetComponent<AudioSource>().Play();
+			}
 			NoSpawnRadious.color = RedColor;
 			lifeDamaged(false);
-		} else if (col.gameObject.tag == "BigDaddy") {
+		} else if (col.gameObject.tag == "BigDaddy" && !Dead) {
+			if (!GetComponent<AudioSource>().isPlaying) {
+				GetComponent<AudioSource>().Play();
+			}
 			NoSpawnRadious.color = RedColor;
 			lifeDamaged(true);
 		}

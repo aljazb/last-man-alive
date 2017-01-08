@@ -9,6 +9,7 @@ public class ZombieLifeController : MonoBehaviour {
 	[SerializeField] private Transform ZombieCenter;
 	[SerializeField] private Animator Animator;
 	[SerializeField] private int LifeCount;
+	[SerializeField] private AudioSource DeathSound;
 
 	private bool SinkToGround = false;
 	public bool Dead = false;
@@ -24,6 +25,7 @@ public class ZombieLifeController : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col) {
 		if (col.gameObject.tag == "Bullet") {
+			GetComponent<AudioSource>().Play();
 			LifeCount--;
 			if (LifeCount <= 0) {
 				Die();	
@@ -32,6 +34,10 @@ public class ZombieLifeController : MonoBehaviour {
 	}
 
 	public void Die() {
+		if (Dead) {
+			return;
+		}
+		DeathSound.Play();
 		Animator.SetTrigger("Stop");
 		Dead = true;
 		Rigidbody.useGravity = true;

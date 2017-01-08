@@ -9,6 +9,7 @@ public class DoorController : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col) {
 		if (col.gameObject.tag == "Bullet") {
+			GetComponent<AudioSource>().Play();
 			HitCount++;
 
 			if (HitCount > 3*ChangeCount) {

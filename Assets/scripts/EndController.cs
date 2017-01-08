@@ -8,6 +8,8 @@ public class EndController : MonoBehaviour {
 	void OnTriggerEnter(Collider col) {
 		if (col.gameObject.tag == "Player") {
 			CameraAnimator.SetTrigger("End");
+			if (!GetComponent<AudioSource>().isPlaying)
+				GetComponent<AudioSource>().Play();
 		}
 	}
 }

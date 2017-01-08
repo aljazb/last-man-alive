@@ -13,6 +13,7 @@ public class GraveController : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col) {
 		if (col.gameObject.tag == "Bullet") {
+			GetComponent<AudioSource>().Play();
 			Health--;
 			if (Health <= 0) {
 				Instantiate(GraveDestroyPrefab, transform.position, GraveDestroyPrefab.transform.rotation);
