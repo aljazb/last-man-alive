@@ -6,13 +6,11 @@ public class DoorController : MonoBehaviour {
 	[SerializeField] private GameObject[] Doors;
 	[SerializeField] private int HitCount;
 	[SerializeField] private int ChangeCount;
-	[SerializeField] private AudioSource DoorsShotSound;
 
 	void OnCollisionEnter(Collision col) {
 		if (col.gameObject.tag == "Bullet") {
 			GetComponent<AudioSource>().Play();
 			HitCount++;
-			DoorsShotSound.Play();
 
 			if (HitCount > 3*ChangeCount) {
 				gameObject.GetComponent<BoxCollider>().enabled = false;
